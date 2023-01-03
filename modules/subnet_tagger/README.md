@@ -12,7 +12,7 @@ Ie. `myteam-private-eun1-az1`
 
 ```terraform
 module "private_subnets" {
-  source      = "git@github.com:oslokommune/terraform-vpc-tagger.git//modules/subnet_tagger?ref=v1"
+  source      = "oslokommune/shared-vpc-tagger/aws"
   name_prefix = local.team_name
   tier        = "private"
   tags        = local.common_tags
@@ -25,7 +25,7 @@ module "private_subnets" {
 }
 
 module "public_subnets" {
-  source      = "git@github.com:oslokommune/terraform-vpc-tagger.git//modules/subnet_tagger?ref=v1"
+  source      = "oslokommune/shared-vpc-tagger/aws"
   name_prefix = local.vpc_name
   tier        = "public"
 
