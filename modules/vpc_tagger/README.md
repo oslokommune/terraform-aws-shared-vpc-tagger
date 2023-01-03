@@ -6,7 +6,7 @@ Tags shared VPC
 
 ```terraform
 module "shared_vpc" {
-  source = "git@github.com:oslokommune/terraform-vpc-tagger.git//modules/vpc_tagger?ref=v1"
+  source = "oslokommune/shared-vpc-tagger/aws"
   id     = "vpc-123"
   name   = local.vpc_name
 

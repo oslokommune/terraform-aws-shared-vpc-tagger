@@ -22,7 +22,7 @@ locals {
 }
 
 module "shared_vpc" {
-  source = "git@github.com:oslokommune/terraform-vpc-tagger.git?ref=v1"
+  source  = "oslokommune/shared-vpc-tagger/aws"
 
   vpc = {
     id   = "vpc-123"
